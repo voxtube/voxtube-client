@@ -1,0 +1,43 @@
+{
+  "name": "voxtube",
+  "version": "1.0.0",
+  "description": "VoxTube is a video streaming platform made for content creators",
+  "author": "voxtube",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
+  "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1624817847.21691f1",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/cloudinary": "^1.0.3",
+    "@nuxtjs/dayjs": "^1.4.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "lodash-es": "^4.17.21",
+    "notiflix": "^3.2.2",
+    "nuxt": "^2.15.7",
+    "nuxt-paystack": "^0.0.12",
+    "simplebar-vue": "^1.6.8",
+    "vue-flutterwave": "^1.0.0",
+    "vuetify": "^2.5.5"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "^2.15.8",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "cloudinary-vue": "^1.2.3",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "prettier": "^2.3.2"
+  }
+}

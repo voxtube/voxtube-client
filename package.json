@@ -24,6 +24,7 @@
     "nuxt": "^2.15.7",
     "nuxt-paystack": "^0.0.12",
     "simplebar-vue": "^1.6.8",
+    "tiptap-vuetify": "^2.24.0",
     "vue-flutterwave": "^1.0.0",
     "vuetify": "^2.5.5"
   },

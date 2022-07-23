@@ -10,12 +10,12 @@
             <div class="d-flex justify-center align-center">
               <v-card-text>
                 <div class="d-flex">
+                  <v-btn style="position: absolute; top: -20px" icon to="/">
+                    <v-icon>mdi-arrow-left-circle</v-icon>
+                  </v-btn>
                   <p class="text-h4 mx-3 font-weight-bold primary--text">
                     Log In
                   </p>
-                  <nuxt-link to="/" class="mb-1">
-                    <v-img src="/img/minidark.png" height="45" width="40" />
-                  </nuxt-link>
                 </div>
                 <v-alert v-if="error" dense type="error" dismissible>
                   {{ error_message }}

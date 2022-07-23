@@ -1,6 +1,6 @@
 <template>
   <v-container>
-      <p class='title'>Categories</p>
+      <p class='title white--text'>Categories</p>
     <v-skeleton-loader v-if='$fetchState.pending' type='card' />
     <CategoriesTable v-else />
     <CategoryFloatingBtn />

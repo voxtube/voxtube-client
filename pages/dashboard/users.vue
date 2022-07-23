@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <p class="title">Users</p>
+    <p class="title white--text">Users</p>
     <div v-if="$fetchState.pending">
       <v-skeleton-loader type="card" />
     </div>

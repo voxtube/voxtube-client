@@ -5,16 +5,16 @@
         <v-img src="/img/play.svg" contain height="100%" width="100%" />
       </v-col>
       <v-col cols="12" md="6">
-        
+
         <v-container>
           <v-card flat width="500">
             <div class="d-flex justify-center align-center">
               <v-card-text>
                 <div class="d-flex ">
+                  <v-btn style="position: absolute; top: -20px" icon to="/">
+                    <v-icon>mdi-arrow-left-circle</v-icon>
+                  </v-btn>
                   <p class="text-h4 font-weight-bold primary--text">Sign Up</p>
-                   <nuxt-link to="/" class="mb-1 mx-2">
-                    <v-img src="/img/minidark.png" height="45" width="40" />
-                  </nuxt-link>
                 </div>
                 <v-alert v-if="error" dense type="error" dismissible>
                   {{ error_message }}

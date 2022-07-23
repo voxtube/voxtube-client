@@ -1,18 +1,48 @@
 <template>
-  <v-app dark>
-    <h1 v-if='error.statusCode === 404'>
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else-if='error.statusCode === 401'>
-      Unauthorised
-    </h1>
-    <h1 v-else-if='error.statusCode === 403'>
-      {{ error.message || `forbidden` }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to='/'>
+  <v-app dark class='poppins'>
+    <div
+      v-if='error.statusCode === 404'
+      class='d-flex flex-column align-center'>
+      <v-img
+        src="https://res.cloudinary.com/mid-assets/image/upload/v1654777178/mid/illustrations/404_jlhja8.png"
+        height='55%' width='55%'/>
+      <p>{{ pageNotFound }}</p>
+    </div>
+    <div
+      v-else-if='error.statusCode === 401'
+      class='d-flex flex-column align-center'>
+      <v-img
+        src="https://res.cloudinary.com/mid-assets/image/upload/v1654777178/mid/illustrations/access_denied_odepqr.png"
+        height='48%'
+        width='48%'/>
+      <p class='baloo-bai'>{{ error.message || `Unauthorised` }}</p>
+    </div>
+    <div
+      v-else-if='error.statusCode === 403'
+      class='d-flex flex-column align-center'>
+      <v-img
+        src="https://res.cloudinary.com/mid-assets/image/upload/v1654777178/mid/illustrations/access_denied_odepqr.png"
+        height='50%'
+        width='50%'/>
+      <p>{{ error.message || `forbidden` }}</p>
+    </div>
+    <div
+      v-else-if='error.statusCode === 400'
+      class='d-flex flex-column align-center'>
+      <v-img
+        src="https://res.cloudinary.com/mid-assets/image/upload/v1654777177/mid/illustrations/cancel_xdjcar.png"
+        height='40%'
+        width='40%'/>
+      <p>{{ error.message || `Bad Request` }}</p>
+    </div>
+    <div
+      v-else
+      class='d-flex flex-column align-center'>
+      <!--      <v-img src='/images/illustrations/404-1.png' height='55%' width='55%' />-->
+      <v-img src="https://res.cloudinary.com/mid-assets/image/upload/v1654777181/mid/illustrations/server_error_bp1nio.png" height='60%' width='60%'/>
+      <p> {{ otherError }}</p>
+    </div>
+    <NuxtLink to='/' class='text-center'>
       Home page
     </NuxtLink>
   </v-app>
@@ -20,6 +50,7 @@
 
 <script>
 export default {
+  name: 'EmptyLayout',
   layout: 'empty',
   props: {
     error: {
@@ -29,7 +60,7 @@ export default {
   },
   data() {
     return {
-      pageNotFound: '404 Not Found',
+      pageNotFound: 'Page or resource Not Found',
       otherError: 'An error occurred'
     }
   },

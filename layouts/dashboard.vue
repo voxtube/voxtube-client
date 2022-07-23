@@ -14,7 +14,7 @@
       </v-btn>
       <v-app-bar-nav-icon class='white--text mr-3' @click='drawer = !drawer' />
       <nuxt-link to='/' class='mb-1'>
-        <v-img :src='`/img/minilight.png`' height='25' width='25' />
+        <v-img :src='`/icon.png`' height='25' width='25' />
       </nuxt-link>
       <v-spacer />
       <ProfileMenu />
@@ -47,7 +47,7 @@
     >
 
       <simplebar style='height: 100%'>
-        <v-list>
+        <v-list nav>
           <v-list-item
             v-for='(item, i) in items'
             :key='i'
@@ -64,6 +64,31 @@
               <v-list-item-title v-text='item.title' />
             </v-list-item-content>
           </v-list-item>
+
+          <!-- Settings -->
+          <v-list-group
+            no-action
+            color="white"
+            prepend-icon="mdi-cog"
+          >
+            <template #activator>
+              <v-list-item-title class="baloo-bai" :class="{'white--text': $vuetify.theme.dark}">Settings</v-list-item-title>
+            </template>
+            <v-list-item
+              v-for="setting in settings"
+              :key="setting.title"
+              :to='setting.to'
+              class='nav'
+              exact-active-class='active'
+              exact
+            >
+              <v-list-item-title class="baloo-bai" v-text="setting.title"></v-list-item-title>
+
+              <v-list-item-icon>
+                <v-icon v-text="setting.icon"></v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list-group>
         </v-list>
       </simplebar>
     </v-navigation-drawer>
@@ -94,7 +119,11 @@ export default {
         { title: 'Users', icon: 'mdi-card-account-details', to: '/dashboard/users' },
         { title: 'Categories', icon: 'mdi-folder-multiple-image', to: '/dashboard/categories' },
         { title: 'Reports', icon: 'mdi-flag', to: '/dashboard/reports' },
-        { icon: 'mdi-cog', title: 'Settings', to: '/dashboard/settings' }
+      ],
+      settings: [
+        // { title: 'General', icon: 'mdi-cogs', to: '/dashboard/settings' },
+        { title: 'Policy', icon: 'mdi-lock-check', to: '/dashboard/settings/policy' },
+        { title: 'Terms And Condition', icon: 'mdi-shield-lock', to: '/dashboard/settings/tos' },
       ]
     }
   },

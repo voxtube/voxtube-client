@@ -20,7 +20,7 @@
       />
       <nuxt-link to="/" class="mb-1">
         <v-img
-          src="/img/minilight.png"
+          src="/icon.png"
           height="25"
           width="25"
         />

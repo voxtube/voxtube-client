@@ -32,8 +32,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/capitalize',
-    '~/plugins/naira',
+    '~/plugins/upper-first',
+    '~/plugins/sentenceCase',
+    '~/plugins/editor',
     { src: '~/plugins/flutterwave', ssr: false }
   ],
 
@@ -188,7 +189,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['lodash-es'],
+    transpile: ['lodash-es', 'vuetify/lib', 'tiptap-vuetify'],
     extractCSS: true
     // Other build options
   }

@@ -51,7 +51,7 @@ export default {
 
   // loading bar
   loading: {
-    color: '#253358',
+    color: '#fff',
     continuous: true
     // throttle: 0
   },

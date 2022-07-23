@@ -1,21 +1,24 @@
 <template>
   <v-app dark>
-  <appbar />
-  
+    <appbar/>
+
     <v-main>
-    
-        <Nuxt />
-      
+
+      <Nuxt/>
+
+      <Footer/>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import appbar from '~/components/appbar/appBar.vue'
+import Footer from "~/components/core/home/Footer";
+
 export default {
   name: 'HomeLayout',
-  components: { appbar },
-  
+  components: {Footer, appbar},
+
 }
 </script>
 

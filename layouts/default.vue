@@ -53,16 +53,18 @@
     <v-main>
       <Nuxt />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
 
 import appbar from '~/components/appbar/appBar.vue'
+import Footer from "~/components/core/home/Footer";
 
 
 export default {
-  components: { appbar },
+  components: {Footer, appbar },
   data() {
     return {
       title: 'Vuetify.js',

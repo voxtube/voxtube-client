@@ -66,7 +66,7 @@
 
         <!--      published sluts-->
         <template #[`item.price`]='{ item }'>
-          <p>₦{{ item.price }}</p>
+          <p>${{ item.price }}</p>
         </template>
 
         <!--    Actions slut      -->
@@ -109,7 +109,7 @@ export default {
         { text: 'Category', value: 'category.name' },
         { text: 'Free', value: 'free' },
         { text: 'Published', value: 'isPublish' },
-        { text: 'Price (₦)', value: 'price' },
+        { text: 'Price ($)', value: 'price' },
         { text: 'Actions', value: 'actions', sortable: false }
       ]
     }

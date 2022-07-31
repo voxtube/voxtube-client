@@ -35,10 +35,10 @@
   export default {
     data: () => ({
       links: [
+        { name: 'Planet Scale', url: 'https://planetscale.com', },
+        { name: 'HashNode', url: 'https://townhall.hashnode.com/planetscale-hackathon', },
         { name: 'Policy', url: '/policy', },
         { name: 'Terms Of Use', url: '/tos', },
-        { name: 'Planet Scale', url: 'https://planetscale.com', },
-        { name: 'HashNode', url: 'https://townhall.hashnode.com/planetscale-hackathon', }
       ]
     }),
   }

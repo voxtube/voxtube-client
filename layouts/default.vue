@@ -50,8 +50,8 @@
       </simplebar>
 
     </v-navigation-drawer>  -->
-    <v-main>
-      <Nuxt />
+    <v-main class="primary">
+      <Nuxt style="height: 85vh" />
     </v-main>
     <Footer />
   </v-app>

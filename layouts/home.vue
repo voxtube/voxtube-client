@@ -2,7 +2,7 @@
   <v-app dark>
     <appbar/>
 
-    <v-main>
+    <v-main class="primary">
 
       <Nuxt/>
 

@@ -15,6 +15,9 @@
       <v-spacer />
       <v-spacer />
 
+      <v-btn text color="accent" to="/videos" class="mx-2 py-6">
+        Videos
+      </v-btn>
       <ProfileMenu />
       <v-spacer></v-spacer>
     </v-app-bar>

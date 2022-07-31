@@ -3,9 +3,10 @@
     <template #activator="{ on, attrs }">
       <v-fab-transition>
         <v-btn
-          color="primary"
+          color="secondary"
           fab
           large
+          elevation="21"
           dark
           bottom
           left
@@ -109,7 +110,7 @@ export default {
 
 <style scoped>
 .fb {
-  bottom: 10px;
+  bottom: 20px;
   right: 30px;
   position: absolute;
 }

@@ -24,7 +24,7 @@
           {{ video._count.view }} views  {{ $dayjs(video.createdAt).fromNow() }}
         </p>
         <span v-if='video.free' class='float-right' :class='textStyle'>Free</span>
-        <span v-else class='float-right' :class='textStyle'>{{ video.price | naira }}</span>
+        <span v-else class='float-right' :class='textStyle'>${{ video.price }}</span>
       </div>
     </v-row>
 

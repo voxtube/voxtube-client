@@ -1,12 +1,10 @@
 <template>
-  <v-app class="primary">
     <v-container>
       <Hero />
 <!--      <Trending />-->
 <!--      <MostWatched />-->
       <BeCreator />
     </v-container>
-  </v-app>
 </template>
 
 <script>

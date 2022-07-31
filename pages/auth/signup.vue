@@ -63,6 +63,7 @@
                         name="country"
                         menu-props="auto"
                         type="select"
+                        placeholder="Select Country"
                         :items="country_list"
                         aria-label="country"
                         :rules="[fieldRequired]"
@@ -169,7 +170,7 @@ export default {
     formData: {
       email: '',
       username: '',
-      country: 'Nigeria',
+      country: '',
       password: '',
     },
     tos: false,

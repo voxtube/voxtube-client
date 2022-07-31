@@ -68,7 +68,7 @@
           <!--    Price    -->
           <v-col cols='12' sm='6'>
             <v-text-field v-model.number='formData.price'
-                          prepend-inner-icon='mdi-currency-ngn'
+                          prepend-inner-icon='mdi-currency-usd'
                           label='Price'
                           type='number'
                           placeholder='Enter Video Price...'
@@ -80,7 +80,7 @@
           <!--    Rent Price    -->
           <v-col cols='12' sm='6'>
             <v-text-field v-model.number='formData.rent_price'
-                          prepend-inner-icon='mdi-currency-ngn'
+                          prepend-inner-icon='mdi-currency-usd'
                           label='Rent Price'
                           type='number'
                           placeholder='Enter Video Rent Price...'

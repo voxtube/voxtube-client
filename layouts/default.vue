@@ -51,7 +51,7 @@
 
     </v-navigation-drawer>  -->
     <v-main class="primary">
-      <Nuxt style="height: 85vh" />
+      <Nuxt />
     </v-main>
     <Footer />
   </v-app>

@@ -17,8 +17,6 @@ export default {
   }),
   async fetch() {
     this.history = await this.$axios.$get(`/history/${this.$auth.user.id}`)
-    // eslint-disable-next-line no-console
-    console.log('videos', this.history)
     this.categories = await this.$axios.$get(`/category`)
   },
   head: {

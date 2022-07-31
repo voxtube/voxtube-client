@@ -2,13 +2,12 @@
   <div class="primary">
     <v-container class="">
       <v-row>
-        <v-col cols="12" md="12">
+        <v-col cols="12" md="12" class="mb-0">
           <div class="text-center">
-            <p class="font-weight-bold white--text text-h4 mt-8">Trending</p>
-            <p class="text-center accent--text text-subtitle-1">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              earum magni perferendis itaque
-            </p>
+<!--            <p class="font-weight-bold white&#45;&#45;text text-h4 mt-8">Trending</p>-->
+<!--            <p class="text-center accent&#45;&#45;text text-subtitle-1 mb-0">-->
+<!--             Trending now in VoxTube-->
+<!--            </p>-->
           </div>
         </v-col>
         <v-col cols="12" md="12" class="px-0 mx-0">
@@ -18,8 +17,12 @@
               color="white"
             ></v-progress-circular>
           </div>
+          <p class="font-weight-bold white--text text-center text-h4 mt-8">Trending</p>
+          <p class="text-center accent--text text-subtitle-1 mb-0">
+            Trending now in VoxTube
+          </p>
           <v-slide-group v-model="model" dark show-arrows class="ma-0">
-            <v-slide-item v-for="item in vidoes" :key="item.title">
+            <v-slide-item v-for="item in videos" :key="item.id">
               <v-hover v-slot="{ hover }">
                 <div rounded="lg" :class="{ 'on-hover': hover }">
                   <v-img
@@ -28,7 +31,7 @@
                     contain
                     height="200"
                     style="cursor: pointer"
-                    :src="item.img"
+                    :src="item.thumbnailUrl"
                     @click="go(item)"
                   >
                     <v-expand-transition>
@@ -60,7 +63,7 @@
                             Free
                           </p>
                           <p v-if="item.free === false" class="text-caption">
-                            {{ item.price }}
+                            ${{ item.price }}
                           </p>
                         </div>
                       </div>
@@ -82,135 +85,16 @@ export default {
     return {
       model: null,
       items: [],
-      vidoes: [
-        {
-          channel: { name: 'ultra' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Hello World',
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2tWq4FFUZvo67qmHh4zxBY87xdHhdwcJ2g&usqp=CAU',
-          price: 150,
-          category: {
-            id: 'ckxbngcfe08090w0wgq8d5mgw',
-            name: 'demo',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          free: false,
-        },
-        {
-          channel: { name: 'Mj' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Fast 10',
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBV8rK_dluA4rcRQwowsdXB7JuonBmPP_dZg&usqp=CAU',
-          price: 150,
-          free: false,
-          category: {
-            id: 'ckxbngcfe08090w0wq8d5mgw',
-            name: 'anime/cartton',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-        },
-        {
-          channel: { name: 'Ismael' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Konso Suba',
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD0qNIJtyObQ0ZGCyHntrAnx9YUK0b8PjVzg&usqp=CAU',
-          category: {
-            id: 'ckxbngcfe08090wgq8d5mgw',
-            name: 'Romance',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          free: true,
-        },
-        {
-          channel: { name: 'Priscillia' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Captain Marvel',
-          category: {
-            id: 'ckxbngcfe08090w0wgq8d5mgw',
-            name: 'Love',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEwt1869PSEmq0sE2MRkpJFr1qf3lM2fVtA&usqp=CAU',
-
-          free: true,
-        },
-        {
-          channel: { name: 'Ismael' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Gravity',
-          category: {
-            id: 'ckxbngcfewgq8d5mgw',
-            name: 'demo',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQl6ujTFm_7Ycbuu9OMtMkDMrIoXom51CXdA&usqp=CAU',
-          free: true,
-        },
-        {
-          channel: { name: 'Mj' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          category: {
-            id: 'ckxbngcfe08090w0wgq8d5m6',
-            name: 'demo',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          title: 'Erased',
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReELEQ-I2_JPFMYvdnt-xh0_EAUHSFF_QBYg&usqp=CAU',
-          price: 150,
-          free: false,
-        },
-        {
-          channel: { name: 'Pro' },
-          _count: { view: 52 },
-          category: {
-            id: 'ckxbngcfe08090w0w77ujgq8d5mgw',
-            name: 'demo',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-          createdAt: Date.now(),
-          title: 'Dc',
-          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAHafGSg_YX1j7wWepyDMAOaqu6mWZZH6sQ&usqp=CAU',
-          price: 150,
-          free: false,
-        },
-        {
-          channel: { name: 'Ismael' },
-          _count: { view: 52 },
-          createdAt: Date.now(),
-          title: 'Freedom',
-          img: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-movie-poster-template-design-0f5fff6262fdefb855e3a9a3f0fdd361_screen.jpg?ts=1573101130',
-          price: 150,
-          free: false,
-          category: {
-            id: 'ckxbngcf90w0wgq8d5mgw',
-            name: 'Action/adventure',
-            description: '',
-            createdAt: '2021-12-18T10:00:20.714Z',
-          },
-        },
-      ],
+      videos: [],
       loading: false,
     }
   },
-
+  async fetch() {
+    this.videos = await this.$axios.$get('/video/analytics/trending')
+    // eslint-disable-next-line no-console
+    console.log('videos', this.videos)
+  },
   methods: {
-    async fetch() {
-      this.videos = await this.$axios.$get('/video')
-    },
-
     go() {
 
     },

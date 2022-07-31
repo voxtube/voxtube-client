@@ -158,11 +158,13 @@ export default {
 
   methods: {
     vidfilter(item) {
-      return item.video.category.name
+      return item.category.name
         .toLowerCase()
         .includes(this.filter.toLowerCase())
     },
     search(item) {
+      // eslint-disable-next-line no-console
+      console.log('item', item)
       return item.video.title.toLowerCase().includes(this.global.toLowerCase())
     },
     go(item) {
